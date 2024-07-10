@@ -32,8 +32,6 @@ function setClientWidth() {
         "--client-width",
         htmlElement.clientWidth
     );
-    var s = htmlElement.style.getPropertyValue("--client-width");
-    console.log(s);
 }
 
 setScrollVar();
