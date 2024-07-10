@@ -45,28 +45,25 @@ setClientWidth();
 //creating functionality for each of the a
 $(document).ready(function() {
 
-    console.log("page is ready");
-
     //home button link
     $('#home-button').on('click', function() {
-        console.log("home button clicked");
-        window.location.href = window.location.href.replace(/\/[^\/]*$/, '/index.html');
+        window.location.href = window.location.href.replace(/\/[^\/]*$/, '/');
     });
 
     $('#about-us-button').on('click', function() {
-        window.location.href = "/about_us.html";
+        window.location.href = window.location.href.replace(/\/[^\/]*$/, '/about_us.html');
     });
 
     $('#temple-services-button').on('click', function() {
-        window.location.href = "/temple_services.html";
+        window.location.href = window.location.href.replace(/\/[^\/]*$/, '/temple_services.html');
     });
 
     $('#events-button').on('click', function() {
-        window.location.href = "/events.html";
+        window.location.href = window.location.href.replace(/\/[^\/]*$/, '/events.html');
     });
 
     $('#contact-us-button').on('click', function() {
-        window.location.href = "/contact_us.html";
+        window.location.href = window.location.href.replace(/\/[^\/]*$/, '/contact_us.html');
     });
 
 });
