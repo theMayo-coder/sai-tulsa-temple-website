@@ -50,7 +50,7 @@ $(document).ready(function() {
     //home button link
     $('#home-button').on('click', function() {
         console.log("home button clicked");
-        window.location.href = "./index.html";
+        window.location.href = window.location.href.replace(/\/[^\/]*$/, '/index.html');
     });
 
     $('#about-us-button').on('click', function() {
