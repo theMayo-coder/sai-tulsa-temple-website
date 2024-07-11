@@ -46,23 +46,23 @@ setClientWidth();
 $(document).ready(function() {
 
     //home button link
-    $('#home-button').on('click', function() {
+    $('.home-button').on('click', function() {
         window.location.href = window.location.href.replace(/\/[^\/]*$/, '/');
     });
 
-    $('#about-us-button').on('click', function() {
+    $('.about-us-button').on('click', function() {
         window.location.href = window.location.href.replace(/\/[^\/]*$/, '/about_us.html');
     });
 
-    $('#temple-services-button').on('click', function() {
+    $('.temple-services-button').on('click', function() {
         window.location.href = window.location.href.replace(/\/[^\/]*$/, '/temple_services.html');
     });
 
-    $('#events-button').on('click', function() {
+    $('.events-button').on('click', function() {
         window.location.href = window.location.href.replace(/\/[^\/]*$/, '/events.html');
     });
 
-    $('#contact-us-button').on('click', function() {
+    $('.contact-us-button').on('click', function() {
         window.location.href = window.location.href.replace(/\/[^\/]*$/, '/contact_us.html');
     });
 
