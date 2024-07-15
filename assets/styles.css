@@ -10,9 +10,9 @@
 #sai-baba-img {
     width: 100%;
     /* opacity fades as the page is scrolled */
-    opacity: calc(max(1 - (var(--scroll)/100*1.5), 0.2));
+    opacity: calc(max(1 - (var(--scroll)/100*1.2), 0.2));
     z-index: 1;
-    transform: translateY( calc(-1px * (var(--client-width) - 550) * 0.6));
+    transform: translateY( calc((1px * (var(--client-width) - 1519) * -0.1) - 100px));
 }
 
 #img-overlay {
@@ -21,31 +21,45 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgb(238, 143, 79);
+    background-color: rgb(240, 142, 21);
     z-index: 0;
 }
 
 #scroll {
     position: relative;
-    margin-top: 20px;
     width: 100%;
-    background-color: rgb(240, 161, 87);
+    background-color: rgb(232, 166, 59);
     padding-top: 60px;
-    padding-bottom: 500px;
+    padding-bottom: 50px;
+    z-index: 2;
+}
+
+#footer {
+    position: relative;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: rgb(153, 76, 20);
     z-index: 2;
 }
 
 #nav-bar {
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
     height: 90px;
-    background-color: rgba(0, 0, 0, 0.368);
+    background-color: rgba(108, 41, 10, 0.912);
+    margin-top: calc((1px * var(--client-height) * (7/8)) - 200px);
     z-index: 3;
     align-items: center;
     display: flex;
     flex-direction: row;
-    justify-content: left;
+    justify-content: center;
+}
+
+#nav-bar div {
+    margin-left: 7px;
+    margin-right: 7px;
 }
 
 .relocate {
@@ -70,15 +84,19 @@ td {
 
 #title-div {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: rgba(255, 255, 255, 0.601);
+    background-color: rgba(108, 41, 10, 0.912);
     position: relative;
-    font-size: 30px;
-    margin-top: calc((1px * var(--client-height) * (7/8)) - 200px);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 25px;
+    margin-top: 0px;
     margin-bottom: 0;
+    z-index: 4;
+    text-align: center;
 }
 
 #title-text {
-    margin-left: 20px;
+    color: white;
 }
 
 #title-home-text {
@@ -96,11 +114,11 @@ td {
 }
 
 #events-table tr.events-row:nth-child(even) {
-    background-color: rgb(243, 229, 197);
+    background-color: rgb(255, 205, 161);
 }
 
 #events-table tr.events-row:nth-child(odd) {
-    background-color: rgb(229, 162, 69);
+    background-color: rgb(238, 166, 98);
 }
 
 #add-event-form{
@@ -122,49 +140,117 @@ td {
     text-decoration: underline;
 }
 
-#facebook-img{
-    margin-left: 30px;
-    margin-top: 40px;
-    width: 80px;
+.contact-text {
+    text-align: left;
+    padding-left: 20px;
+    font-size: 11px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#phone-img {
-    margin-left: 37px;
-    width: 45px;
-}
-
-#phone-table{
-    margin-top: 20px;
-}
-
-#phone-number{
+#contact-table {
     margin-left: 20px;
 }
 
-#email-table {
-    margin-top: 5px;
+#contact-table tr {
+    height: 40px;
 }
 
-#mail-img {
-    margin-left: 28px;
-    width: 60px;
+#facebook-img{
+    width: 40px;
 }
 
-#email {
-    margin-left: 15px;
+#facebook-img-2{
+    width: 150px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: block;
 }
 
-#image-grid {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 900px;
-    width: 100%;
-    padding-top: 50px;
+#phone-img {
+    width: 33px;
 }
 
-#table-imgs {
-    margin-left: 40px;
-    margin-right: 40px;
+#location-img {
+    padding-left: 1px;
+    width: 38px;
+}
+
+#email-img {
+    width: 35px;
+}
+
+#main-events-div {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#main-flexbox {
+    display: inline-flex;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#temple-timings, #temple-updates {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-content: start;
+    background-color: rgb(255, 255, 255);
+    color: rgb(210, 148, 48);
+    font-size: 12px;
+    text-align: center;
+}
+
+#temple-updates {
+    width: 65%;
+    overflow: hidden;
+}
+
+#temple-timings {
+    width: 35%;
+    border-right: 4px rgb(232, 166, 59) solid;
+}
+
+#temple-timings h2 {
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.main-table-title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgb(133, 53, 16);
+    color: white;
+    text-align: center;
+}
+
+.main-table-title h1 {
+    font-size: 27px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#donate-button {
+    height: 50px;
+    width: 90px;
+    font-size: 20px;
+    background-color: rgb(250, 224, 52);
+    color: rgb(0, 0, 0);
+}
+
+.img-flexbox {
+    display: inline-flex;
+    width: 95%;
+    background-color: white;
+}
+
+.img-flexbox img {
+    width: 50%;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 .center {
@@ -189,7 +275,7 @@ td {
     margin-top: 30px;
     width: 100%;
     height: calc((40/487) * var(--client-width) * 1px);
-    background-color: rgb(144, 87, 11);
+    background-color: rgb(136, 62, 9);
 }
 
 .header1 {
@@ -204,7 +290,7 @@ td {
 
 #table-down-photo {
     width: 100%;
-    transform: translateY(calc(min(1px * var(--scroll) - 60px, 0px)) );
+    /* transform: translateY(calc(min(1px * var(--scroll) - 60px, 0px)) ); */
 }
 
 #table-up-photo {
@@ -217,7 +303,6 @@ td {
 
 #table-left-photo {
     width: 100%;
-    transform: translateX(calc(min(1px * var(--scroll) * 0.7 - 40px, 0px)) );
 }
 
 h3:hover {
@@ -235,7 +320,24 @@ h3:hover {
     background-color: rgba(255, 255, 255, 0.673);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 15px;
+    color: black;
     animation: background-color 0.3s ease-in;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+}
+
+.dropbtn h1 {
+    font-size: 20px;
+}
+
+.triangle-up {
+    width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 10px solid #555;
+    margin-left: 10px;
 }
 
 .dropdown-content {
@@ -247,8 +349,17 @@ h3:hover {
     display: block;
 }
 
+.dropbtn {
+    margin-left: 15px;
+}
+
 .dropdown:hover .dropbtn {
     background-color: rgba(255, 255, 255, 0.849);
+}
+
+.dropdown:hover .triangle-up {
+    transition: all 0.3s ease;
+    transform: rotate(180deg) translateY(-2px);
 }
 
 .dropdown-content button {
@@ -261,10 +372,103 @@ h3:hover {
     font-size: 30px;
 }
 
+#videos {
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 800px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#videos video {
+    width: 49%;
+}
+
+.span-titles {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(133, 53, 16);
+    text-align: center;
+    color: white;
+    font-size: 15px;
+}
+
+.span-titles-opp {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    text-align: center;
+    color: rgb(210, 148, 48);
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 760px) {
+
+    #title-div {
+        font-size: 18px;
+    }
+    
+}
+
 @media only screen and (max-width: 540px) {
+
+    .span-titles {
+        font-size: 12px;
+    }
+    .span-titles-opp {
+        font-size: 12px;
+    }
+
+    .contact-text {
+        text-align: left;
+        padding-left: 10px;
+        font-size: 6px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #facebook-img{
+        width: 20px;
+    }
+
+    #facebook-img-2{
+        width: 120px;
+        display: block;
+    }
+    
+    #phone-img {
+        width: 20px;
+    }
+    
+    #location-img {
+        padding-left: 1px;
+        width: 20px;
+    }
+    
+    #email-img {
+        width: 20px;
+    }
+
+    #contact-table tr {
+        height: 20px;
+    }
+
     #nav-bar {
         flex-direction: column;
         align-items: start;
+        justify-content: start;
+
+    }
+
+    #email #phone-number {
+        font-size: 5px;
+        transform: translateX(40px);
     }
 
     .events-row td {
@@ -277,8 +481,7 @@ h3:hover {
     }
 
     .dropbtn {
-        width: 70px;
-        height: 40px;
+        padding: 5px 10px;
     }
 
     .relocate {
@@ -290,11 +493,43 @@ h3:hover {
     .table-photo {
         border: 2px solid rgb(103, 4, 4);
     }
+
     #title-div {
-        font-size: 20px;
+        font-size: 15px;
     }
-    .header1 {
-        font-size: 20px;
-        margin-left: 20px;
+
+    #videos {
+        flex-direction: column;
     }
+
+    #videos video {
+        margin-top: 10px;
+        width: 100%
+    }
+    
+}
+
+@media only screen and (max-width: 760px) {
+    #main-flexbox {
+        flex-direction: column;
+    }
+
+    #temple-timings, #temple-updates {
+        width: 100%;
+    }
+
+    #temple-timings {
+        margin-bottom: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 860px) {
+
+    .center-div {
+        width: max-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
